@@ -34,15 +34,31 @@
 	.title {
 		&_left {
 			font-size: 32px;
+			width: 730px;
+		}
+	}
+
+	.carousel {
+		overflow: hidden;
+
+		&__wrapper {
+			width: 500px;
+		}
+
+		&__slide {
+			img {
+				width: 500px;
+			}
+		}
+
+		.prev,
+		.next {
+			display: none;
 		}
 	}
 }
 
-.carousel {
-	&__wrapper {
-		width: 650px;
-	}
-}
+
 
 
 // размер экрана 576-767px
@@ -91,10 +107,27 @@
 	.title {
 		&_left {
 			font-size: 25px;
-			line-height: 35pxx;
+			line-height: 35px;
+			width: 550px;
+		}
+	}
+
+	.carousel {
+
+		&__wrapper {
+			width: 400px;
+		}
+
+		&__slide {
+			img {
+				width: 400px;
+			}
 		}
 	}
 }
+
+
+
 
 
 // размер экрана 320-575px
@@ -219,6 +252,7 @@
 			width: 100%;
 			font-size: 20px;
 			text-align: center;
+			line-height: 28px;
 		}
 	}
 
@@ -230,4 +264,18 @@
 			width: 250px;
 		}
 	}
+
+	.carousel {
+
+		&__wrapper {
+			width: 300px;
+		}
+
+		&__slide {
+			img {
+				width: 300px;
+			}
+		}
+	}
+
 }

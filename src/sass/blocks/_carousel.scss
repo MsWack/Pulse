@@ -7,7 +7,42 @@
 		margin: 0 auto;
 	}
 
-	.slick-prev, .slick-next {
+	&__slide {
+		display: none;
+		img {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__numbertext {
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+	}
+
+	&__dots {
+		text-align: center;
+	}
+
+	&__dot {
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+
+		&:hover {
+			background-color: #717171;
+		}
+	}
+
+	.prev,
+	.next {
 		// этот класс взяли из файла script.js. Помещаем его внутрь класса карусель, чтобы застилизовать именно для этого класса. Если помстим его как отдельный класс, то стрелочка стилизуется сразу везде, где используется.
 		position: absolute;
 		top: 50%;
@@ -25,7 +60,8 @@
 			height: 50px;
 		}
 	}
-	.slick-next {
+
+	.next {
 		left: auto; // выключили left, чтобы он вообще не работал
 		right: -66px;
 	}
