@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/slick.css">
+	<!-- подключили css для создания карусели, файл css взяли с сайта slick-->
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Pulse</title>
+</head>
+
+<body>
+	<section class="promo">
+		<div class="container">
+			<header class="header">
+				<a href="#" class="header__logo">
+					<img src="icons/logo.png" alt="logo">
+				</a>
+				<div class="header__official">
+					<p>Официальный представитель</p>
+					<span>Garmin, Polar, Suunto</span>
+				</div>
+				<div class="header__contacts">
+					<a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a>
+					<button class="button">заказать звонок</button>
+				</div>
+			</header>
+			<div class="promo__wrapper">
+				<h1 class="promo__title">Подбор пульсометра</h1>
+				<h2 class="promo__subtitle">с учётом вашего уровня подготовки</h2>
+				<div class="promo__icons">
+					<div class="promo__icon">
+						<img src="icons/main/timer.png" alt="timer">
+						<p>Время подбора: <br> 10 минут</p>
+					</div>
+					<div class="promo__icon">
+						<img src="icons/main/hand-cart.png" alt="hand cart">
+						<p>Бесплатная <br> доставка</p>
+					</div>
+					<div class="promo__icon">
+						<img src="icons/main/messages.png" alt="messages">
+						<p>Ответим <br> на все вопросы</p>
+					</div>
+				</div>
+				<button class="button button_main">заказать консультацию</button>
+				<div class="promo__link">
+					<p>или <a href="#">перейти в каталог</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="advantages">
+		<div class="container">
+			<h2 class="title">наши преимущества</h2>
+			<div class="advantages__wrapper">
+				<div class="advantages__item">
+					<img class="advantages__icon" src="icons/advantages/cup.png" alt="cup">
+					<h3 class="advantages__subtitle">Делимся опытом</h3>
+					<p class="advantages__descr">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают
+						полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</p>
+				</div>
+				<div class="advantages__item">
+					<img class="advantages__icon" src="icons/advantages/heart.png" alt="heart">
+					<h3 class="advantages__subtitle">Заботимся о здоровье</h3>
+					<p class="advantages__descr">Мы работаем для того, <br> чтобы Ваши занятия спортом шли на пользу Вашему
+						здоровью и были в радость Вам и Вашим близким!</p>
+				</div>
+				<div class="advantages__item">
+					<img class="advantages__icon" src="icons/advantages/shoe.png" alt="shoe">
+					<h3 class="advantages__subtitle">Учим бегать</h3>
+					<p class="advantages__descr">Помогаем с обучением <br> правильной технике бега! <br> Дружим с крупнейшей
+						школой бега в России - <a href="#">I LOVE RUNNING.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="consultation">
+		<div class="container">
+			<h2 class="title title_left">Получите бесплатную консультацию по подбору пульсометра
+			</h2>
+			<p class="consultation__descr">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут</p>
+			<form class="form-feed" action="#">
+				<!-- тег form используется для создания форм обратной связи, где action - обязательный элемент (обработчик формы) -->
+				<input required placeholder="Ваше имя" type="text" name="name">
+				<!-- с тегом imput используется тег label, который устанавливает связь между текстом и самим действием, на который направлен input. Например, если мы сделаем чек-боксы через input без label, то мы сможем нажимать только на сами икноки выбора. Однако, если мы установим label, то сможем нажимать и на сам текст напротив чекбокса. -->
+				<input required placeholder="Ваш телефон" type="number" name="phone">
+				<input required placeholder="Ваше E-mail" type="email" name="email">
+				<!-- <textarea name="" style="resize: none;"></textarea> для создания блока комментария. resize: none - для удаления возможности изменять размер поля пользователем -->
+				<button class="button button_submit">Заказать консультацию</button>
+			</form>
+		</div>
+	</section>
+
+	<section class="carousel">
+		<div class="container">
+			<div class="carousel__wrapper">
+				<div>
+					<img src="img/slide_1.jpg" alt="Слайд 1">
+				</div>
+				<div>
+					<img src="img/slide_2.jpg" alt="Слайд 2">
+				</div>
+				<div>
+					<img src="img/slide_3.jpg" alt="Слайд 3">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/slick.min.js"></script> <!-- подключили три скрипта для создания карусели, взяли с сайта slick -->
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

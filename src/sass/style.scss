@@ -1,0 +1,32 @@
+@import "normalizez.scss";
+@import "resets.scss";
+
+@import "libs/_fonts";
+
+@import "base/_variables";
+@import "base/_mixins";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Museo Sans Cyrl;
+	font-weight: regular;
+}
+
+.container {
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+@import "blocks/_header";
+@import "blocks/_promo";
+@import "blocks/_buttons";
+@import "blocks/_title";
+@import "blocks/_advantages";
+@import "blocks/_consultation";
+@import "blocks/_forms";
+@import "blocks/carousel";
+
+@import "blocks/_media";
