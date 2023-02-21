@@ -7,8 +7,8 @@
 		margin: 0 auto;
 	}
 
-	.slick-prev,
-	.slick-next {
+	.prev,
+	.next {
 		// этот класс взяли из файла script.js. Помещаем его внутрь класса карусель, чтобы застилизовать именно для этого класса. Если помстим его как отдельный класс, то стрелочка стилизуется сразу везде, где используется.
 		position: absolute;
 		top: 50%;
@@ -27,8 +27,34 @@
 		}
 	}
 
-	.slick-next {
+	.next {
 		left: auto; // выключили left, чтобы он вообще не работал
 		right: -66px;
+	}
+
+	&__slider {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.tns-nav {
+		width: 50px;
+		margin: 0 auto;
+		button {
+			width: 10px;
+			height: 10px;
+			border: none;
+			border-radius: 100%;
+			background-color: rgb(161, 161, 161);
+			padding: 0;
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.tns-nav-active {
+			background-color: rgb(73, 73, 73);
+		}
 	}
 }
