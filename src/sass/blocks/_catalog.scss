@@ -1,0 +1,210 @@
+.catalog {
+	padding-bottom: 100px;
+
+	&__tabs {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 60px;
+	}
+
+	&__tab {
+		width: 222px;
+		height: 52px;
+		border: 2px solid #D0D0D0;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 52px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #6B6B6B;
+		transition: 0.5s all; //скорость анимации
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 3px 3px 20px $color-red;
+			border: none;
+		}
+
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		transform: skewX(-25deg); //наклонили прямоугольник, но вместе с прямоугольником наклонился и текст, поэтому текст помещаем в параграф внутри списка li, и после отменяем ему наклон
+
+		p {
+			transform: skewX(25deg); // отменяем наклон для текста
+		}
+
+		&_active {
+			background-color: $color-red;
+			color: #FFFFFF;
+			border: none;
+		}
+	}
+
+	&__content {
+		display: none;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&_active {
+			display: flex;
+		}
+	}
+
+	.catalog-item {
+		width: 300px;
+		min-height: 440px;
+		border: 2px solid #E8E8E8;
+		padding: 20px;
+		overflow: hidden;
+		&:nth-child(-n+3) {
+			margin-bottom: 20px;
+		}
+
+		&__img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			height: 200px;
+			margin-bottom: 15px;
+		}
+
+		&__subtitle {
+			font-weight: 700;
+			font-size: 16px;
+			text-align: center;
+			color: #0D0D0D;
+			margin-bottom: 15px;
+		}
+
+		&__descr {
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 22px;
+			text-align: center;
+			color: #0D0D0D;
+			margin-bottom: 10px;
+		}
+
+		&__link {
+			display: block;
+			font-weight: 500;
+			font-size: 14px;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration-line: underline;
+			color: $color-red;
+			margin-bottom: 20px;
+
+			&:hover {
+				color: $color-red;
+			}
+		}
+
+		hr {
+			height: 1px;
+			background: #E8E8E8;
+			border: none;
+			margin: 0;
+			margin-bottom: 20px;
+		}
+
+		&__footer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__old-price {
+			font-weight: 300;
+			font-size: 14px;
+			text-decoration-line: line-through;
+			color: #555555;
+			margin-bottom: 2px;
+		}
+
+		&__price {
+			font-weight: 700;
+			font-size: 20px;
+			color: #050505
+		}
+
+		// делаем так, чтобы при нажатии на ссылку "подробнее" на карточке появлялся список с описанием товара
+
+		&__wrapper {
+			display: flex;
+			width: calc(200% + 40px); // задали для карточки общую ширину в 200%, из которх 50% заданимает контент и еще 50% занимает описание. При этом добавили через калькулятор 40px марджинов, чтобы контент стоял посередине
+		}
+
+		&__content {
+			width: 50%;
+			margin-right: 0px;
+			transform: translateX(-100%);
+			transition: 0.5s all; //скорость анимации
+
+			&_active {
+				transform: translateX(0%); //задали класс активности для контента, чтобы именно он изначально показывался пользователю, при этом задали ему трансформ, тем самым сказав, что он должен стоять на месте. Когда класс активности будет переходить к описанию, мы применим к сонтенту transform: translateX(-100%) и данный класс будет уходить влево на 100%
+				margin-right: 20px;
+			}
+		}
+
+		&__list {
+			position: relative;
+			width: 50%;
+			margin-left: 20px;
+			transform: translateX(0%);
+			padding-right: 20px;
+			padding-left: 15px; //устанавливаем паддинг для того, чтобы правильно расположить маркеры
+			transition: 0.5s all; //скорость анимации
+			margin-bottom: 0;
+			list-style-type: none;
+
+			&_active {
+				transform: translateX(-100%);
+				margin-left: 0px;
+			}
+
+			li {
+				position: relative;
+				font-weight: 300;
+				font-size: 14px;
+				line-height: 21px;
+				color: #555555;
+				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 5px;
+					height: 5px;
+					background-color: $color-red;
+					left: -10px;
+					top: 7px;
+				}
+			}
+		}
+
+		&__back {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(calc(-50% - 19px));
+			display: block;
+			font-weight: 500;
+			font-size: 14px;
+			text-decoration-line: underline;
+			text-transform: uppercase;
+			color: $color-red;
+			&:hover {
+				color: $color-red;
+			}
+		}
+	}
+}

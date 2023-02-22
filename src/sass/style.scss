@@ -1,10 +1,10 @@
-@import "normalizez.scss";
-@import "resets.scss";
+@import 'normalizez.scss';
+@import 'resets.scss';
 
-@import "libs/_fonts";
+@import 'libs/_fonts';
 
-@import "base/_variables";
-@import "base/_mixins";
+@import 'base/_variables';
+@import 'base/_mixins';
 
 * {
 	box-sizing: border-box;
@@ -21,13 +21,14 @@ html {
 	margin: 0 auto;
 }
 
-@import "blocks/_header";
-@import "blocks/_promo";
-@import "blocks/_buttons";
-@import "blocks/_title";
-@import "blocks/_advantages";
-@import "blocks/_consultation";
-@import "blocks/_forms";
-@import "blocks/carousel";
+@import 'blocks/_header';
+@import 'blocks/_promo';
+@import 'blocks/_buttons';
+@import 'blocks/_title';
+@import 'blocks/_advantages';
+@import 'blocks/_consultation';
+@import 'blocks/_forms';
+@import 'blocks/carousel';
+@import 'blocks/catalog';
 
-@import "blocks/_media";
+@import 'blocks/_media';

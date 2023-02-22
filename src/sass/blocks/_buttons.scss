@@ -9,18 +9,29 @@
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #FFFFFF;
+
 	&:hover {
-	cursor: pointer;
+		cursor: pointer;
 	}
+
 	&_main {
-	width: 300px;
-	height: 50px;
-	font-size: 16px;
-	margin-bottom: 18px;
+		width: 300px;
+		height: 50px;
+		font-size: 16px;
+		margin-bottom: 18px;
 	}
+
 	&_submit {
-	width: 100%;
-	height: 55px;
-	font-size: 16px;
+		width: 100%;
+		height: 55px;
+		font-size: 16px;
 	}
+
+	&_catalog {
+		width: 131px;
+		height: 40px;
+		font-weight: 500;
+		font-size: 14px;
+	}
+
 }
