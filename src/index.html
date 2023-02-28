@@ -23,7 +23,7 @@
 				</div>
 				<div class="header__contacts">
 					<a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a>
-					<button class="button">заказать звонок</button>
+					<button data-modal="consultation" class="button">заказать звонок</button>
 				</div>
 			</header>
 			<div class="promo__wrapper">
@@ -43,7 +43,7 @@
 						<p>Ответим <br> на все вопросы</p>
 					</div>
 				</div>
-				<button class="button button_main">заказать консультацию</button>
+				<button data-modal="consultation" class="button button_main">заказать консультацию</button>
 				<div class="promo__link">
 					<p>или <a href="#">перейти в каталог</a></p>
 				</div>
@@ -430,6 +430,41 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<!-- модальные окна -->
+
+	<div class="overlay"> <!-- затемненный фон при появлении модального окна -->
+		<div class="modal" id="consultation">
+			<div class="modal__close">&times;</div>
+			<h4 class="modal__subtitle">Просто заполните форму заявки</h4>
+			<p class="modal__descr">и мы перезвоним вам в течение 10 минут</p>
+			<form class="form-feed" action="#">
+				<input required placeholder="Ваше имя" type="text" name="name">
+				<input required placeholder="Ваш телефон" type="number" name="phone">
+				<input required placeholder="Ваше E-mail" type="email" name="email">
+				<button class="button button_submit">Заказать консультацию</button>
+			</form>
+		</div>
+
+		<div class="modal" id="order">
+			<div class="modal__close">&times;</div>
+			<h4 class="modal__subtitle">Ваш заказ:</h4>
+			<p class="modal__descr">Пульсометр Polar FT1</p>
+			<form class="form-feed" action="#">
+				<input required placeholder="Ваше имя" type="text" name="name">
+				<input required placeholder="Ваш телефон" type="number" name="phone">
+				<input required placeholder="Ваше E-mail" type="email" name="email">
+				<button class="button button_submit">купить</button>
+			</form>
+		</div>
+
+		<div class="modal modal_mini" id="thanks">
+			<div class="modal__close">&times;</div>
+			<h4 class="modal__subtitle">Спасибо за вашу заявку!</h4>
+			<p class="modal__descr modal__descr_mini">Наш менеджер свяжется с вами в ближайшее время!</p>
+		</div>
+	</div>
 
 
 	<script src="js/tiny-slider.js"></script>

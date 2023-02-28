@@ -112,16 +112,20 @@
 			height: 225px;
 			padding: 30px 40px;
 		}
+
 		&__address {
 			font-size: 18px;
 		}
+
 		&__phone {
 			font-size: 18px;
 		}
+
 		&__social-item {
 			width: 45px;
 			height: 45px;
 		}
+
 		img {
 			height: 20px;
 		}
@@ -200,6 +204,7 @@
 	}
 
 	.catalog {
+		overflow: hidden;
 		&__tab {
 			font-size: 15px;
 		}
@@ -353,7 +358,7 @@
 		align-items: center;
 
 		input {
-			width: 250px;
+			width: 80%;
 		}
 	}
 
@@ -410,18 +415,42 @@
 			height: 200px;
 			padding: 30px 20px;
 		}
+
 		&__address {
 			font-size: 16px;
 		}
+
 		&__phone {
 			font-size: 16px;
 		}
+
 		&__social-item {
 			width: 35px;
 			height: 35px;
 		}
+
 		img {
 			height: 18px;
+		}
+	}
+
+	.modal {
+		width: 90%;
+		min-height: 395px;
+		padding: 60px 20px 30px 20px;
+		&__close {
+			top: 15px;
+			right: 20px;
+		}
+		&__subtitle {
+			font-size: 16px;
+		}
+		&__descr {
+			font-size: 14px;
+		}
+		&_mini {
+			width: 85%;
+			min-height: 140px;
 		}
 	}
 
