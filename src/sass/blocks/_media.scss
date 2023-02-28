@@ -82,6 +82,18 @@
 		}
 	}
 
+	.catalog {
+		&__content {
+			justify-content: space-around;
+		}
+
+		.catalog-item {
+			&:nth-child(4) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
 	.button {
 		&_main {
 			width: 275px;
@@ -151,6 +163,22 @@
 		&__slider {
 			width: 400px;
 			margin-bottom: 30px;
+		}
+	}
+
+	.catalog {
+		&__tab {
+			font-size: 15px;
+		}
+		.catalog-item {
+			min-height: 390px;
+			&:nth-child(5) {
+				margin-bottom: 20px;
+			}
+
+			&__img {
+				height: 150px;
+			}
 		}
 	}
 
@@ -286,6 +314,20 @@
 
 		&__slider {
 			width: 300px;
+		}
+	}
+
+	.catalog {
+		&__tabs {
+			display: flex;
+			flex-direction: column;
+		}
+		&__tab {
+			margin: 0;
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 
