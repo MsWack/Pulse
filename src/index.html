@@ -83,12 +83,12 @@
 			<h2 class="title title_left">Получите бесплатную консультацию по подбору пульсометра
 			</h2>
 			<p class="consultation__descr">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут</p>
-			<form class="form-feed" action="#">
+			<form class="form-feed" id="consultation-form" action="#">
 				<!-- тег form используется для создания форм обратной связи, где action - обязательный элемент (обработчик формы) -->
 				<input required placeholder="Ваше имя" type="text" name="name">
 				<!-- с тегом imput используется тег label, который устанавливает связь между текстом и самим действием, на который направлен input. Например, если мы сделаем чек-боксы через input без label, то мы сможем нажимать только на сами икноки выбора. Однако, если мы установим label, то сможем нажимать и на сам текст напротив чекбокса. -->
-				<input required placeholder="Ваш телефон" type="number" name="phone">
-				<input required placeholder="Ваше E-mail" type="email" name="email">
+				<input required placeholder="Ваш телефон" name="phone">
+				<input required placeholder="Ваш E-mail" type="email" name="email">
 				<!-- <textarea name="" style="resize: none;"></textarea> для создания блока комментария. resize: none - для удаления возможности изменять размер поля пользователем -->
 				<button class="button button_submit">Заказать консультацию</button>
 			</form>
@@ -440,9 +440,9 @@
 			<h4 class="modal__subtitle">Просто заполните форму заявки</h4>
 			<p class="modal__descr">и мы перезвоним вам в течение 10 минут</p>
 			<form class="form-feed" action="#">
-				<input required placeholder="Ваше имя" type="text" name="name">
-				<input required placeholder="Ваш телефон" type="number" name="phone">
-				<input required placeholder="Ваше E-mail" type="email" name="email">
+				<input placeholder="Ваше имя" type="text" name="name">
+				<input placeholder="Ваш телефон" name="phone">
+				<input placeholder="Ваш E-mail" type="email" name="email">
 				<button class="button button_submit">Заказать консультацию</button>
 			</form>
 		</div>
@@ -453,8 +453,8 @@
 			<p class="modal__descr">Пульсометр Polar FT1</p>
 			<form class="form-feed" action="#">
 				<input required placeholder="Ваше имя" type="text" name="name">
-				<input required placeholder="Ваш телефон" type="number" name="phone">
-				<input required placeholder="Ваше E-mail" type="email" name="email">
+				<input required placeholder="Ваш телефон" name="phone">
+				<input required placeholder="Ваш E-mail" type="email" name="email">
 				<button class="button button_submit">купить</button>
 			</form>
 		</div>
@@ -467,8 +467,13 @@
 	</div>
 
 
-	<script src="js/tiny-slider.js"></script>
+	<script src="js/tiny-slider.js"></script> <!-- скрипт для галереи-слайдера -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- jquery-скрипт для табов (вкладок) -->
+	<script src="js/jquery.validate.min.js"></script>
+	<!-- jquery-скрипт для валидации форм. Валидация - проверка на соответствие заданным параметрам заполняемых пользователем параметров -->
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<!-- jquery-скрипт для корректного воода номера телефона (маска ввода номера на сайте) -->
 	<script src="js/script.js"></script>
 
 </body>
