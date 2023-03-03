@@ -3,8 +3,9 @@
 
 @import 'libs/_fonts';
 
-@import 'base/_variables';
-@import 'base/_mixins';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/animation';
 
 * {
 	box-sizing: border-box;

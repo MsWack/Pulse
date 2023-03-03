@@ -5,7 +5,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- ссылка на стили для слайдера -->
 	<link rel="stylesheet" href="css/tiny-slider.css">
+	<!-- ссылка на стили для анимации элементов -->
+	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>Pulse</title>
 </head>
@@ -62,7 +65,7 @@
 						полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</p>
 				</div>
 				<div class="advantages__item">
-					<img class="advantages__icon" src="icons/advantages/heart.png" alt="heart">
+					<img class="advantages__icon advantages__icon_animated" src="icons/advantages/heart.png" alt="heart">
 					<h3 class="advantages__subtitle">Заботимся о здоровье</h3>
 					<p class="advantages__descr">Мы работаем для того, <br> чтобы Ваши занятия спортом шли на пользу Вашему
 						здоровью и были в радость Вам и Вашим близким!</p>
@@ -373,7 +376,7 @@
 	<section class="reviews">
 		<div class="container">
 			<h2 class="title">отзывы клиентов</h2>
-			<div class="reviews__item">
+			<div class="reviews__item animate__animated animate__fadeInUp wow">
 				<img src="img/review_1.png" alt="Фото 1" class="reviews__img">
 				<div class="reviews__text">
 					<p class="reviews__name">Ирина Иванченко</p>
@@ -386,7 +389,7 @@
 				</div>
 			</div>
 
-			<div class="reviews__item">
+			<div class="reviews__item animate__animated animate__fadeInUp wow">
 				<img src="img/review_2.png" alt="Фото 1" class="reviews__img">
 				<div class="reviews__text">
 					<p class="reviews__name">Иван Сёмочкин</p>
@@ -399,7 +402,7 @@
 				</div>
 			</div>
 
-			<div class="reviews__item">
+			<div class="reviews__item animate__animated animate__fadeInUp wow">
 				<img src="img/review_3.png" alt="Фото 1" class="reviews__img">
 				<div class="reviews__text">
 					<p class="reviews__name">Юлия Дашкина</p>
@@ -471,14 +474,16 @@
 	</a>
 
 
-
-	<script src="js/tiny-slider.js"></script> <!-- скрипт для галереи-слайдера -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- скрипт для галереи-слайдера -->
+	<script src="js/tiny-slider.js"></script>
 	<!-- jquery-скрипт для табов (вкладок) -->
-	<script src="js/jquery.validate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- jquery-скрипт для валидации форм. Валидация - проверка на соответствие заданным параметрам заполняемых пользователем параметров -->
-	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<!-- jquery-скрипт для корректного воода номера телефона (маска ввода номера на сайте) -->
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<!-- скрипт для анимации сколлинга -->
+	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 
 </body>
