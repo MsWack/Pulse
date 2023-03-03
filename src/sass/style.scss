@@ -2,9 +2,12 @@
 @import 'resets.scss';
 
 @import 'libs/_fonts';
+//ссылка на стили для слайдера
+@import 'libs/tiny-slider';
+//ссылка на стили для анимации элементов
+@import 'libs/animate.min';
 
 @import 'base/variables';
-@import 'base/mixins';
 @import 'base/animation';
 
 * {
@@ -35,5 +38,4 @@ html {
 @import 'blocks/footer';
 @import 'blocks/modal';
 @import 'blocks/pageup';
-
 @import 'blocks/_media';
