@@ -193,22 +193,29 @@ $(document).ready(function () {
 			//если сверху отступ составляет меньше 1600px
 		} else {
 			//стрелочка исчезает
-			$('.page-up').fadeOut()
+			$('.page-up').fadeOut();
 		}
 	});
 
 
-	//плавный скролинг вверх
-	//берем все ссылки, параметр href которых начинается с # и задаем им определенную функцию, котоая будет срабатывать при клике
-	$("a[href^='#']").click(function () {
-		// задаем переменную с названием _href и получаем в эту переменную то значение, которые было в атрибуте (attr) href. Например, при нажатии на стрелочку вверх мы получим переменную const '#up'
-		const _href = $(this).attr("href");
-		// для html и body задаем анимацию
-		$('html, body').animate({
-			//при нажатии на ссылку, проистываем до блока с определенным id
-			scrollTop: $(_href).offset().top + "px"
-		});
-		return false;
+	//плавный скролинг вверх (взяли с сайта https://www.w3schools.com/)
+	//при клике на ссылку
+	$("a").on('click', function (event) {
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+			// Prevent default anchor click behavior
+			event.preventDefault();
+			// Store hash
+			var hash = this.hash;
+			// Using jQuery's animate() method to add smooth page scroll
+			// The optional number (600) specifies the number of milliseconds it takes to scroll to the specified area
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 600, function () {
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			});
+		} // End if
 	});
 
 
